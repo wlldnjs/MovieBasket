@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dllayout_drawer_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.moviebasket.android.client.main.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bar_logo"/>
+
+            <ImageView
+                android:id="@+id/btn_tag_main"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/main_bar_hash" />
+
+            <ImageView
+                android:id="@+id/btn_toggle_drawer_main"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/main_bar_my" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_base_rlayout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_toolbar_main"
+            android:background="#ffff">
+
+            <include layout="@layout/layout_default_main" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp">
+
+                <ImageView
+                    android:id="@+id/imagefragment_one"
+                    android:layout_width="12dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/main_circle" />
+
+                <ImageView
+                    android:id="@+id/imagefragment_two"
+                    android:layout_width="12dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/main_no_circle" />
+
+                <ImageView
+                    android:id="@+id/imagefragment_three"
+                    android:layout_width="12dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/main_no_circle" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/drawer_layout"/>
+
+
+</android.support.v4.widget.DrawerLayout>

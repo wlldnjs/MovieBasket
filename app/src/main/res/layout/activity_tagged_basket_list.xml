@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tagged_basket_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.moviebasket.android.client.tag.tagged.TaggedBasketListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+        <ImageView
+            android:id="@+id/Homeicon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bar_logo"/>
+        <!--<ImageView
+            android:id="@+id/btn_tag_main"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/main_bar_hash"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/centerImg"/>-->
+
+        <ImageView
+            android:id="@+id/backBtnIcon"
+            android:layout_width="32dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_backicon" />
+
+        <!--<ImageView
+            android:id="@+id/btn_toggle_drawer_main"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/main_bar_my"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/centerImg"
+            android:layout_marginRight="10dp"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hash_tag_header"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/rl_toolbar_main"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/hash_tag_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="#연애 영화"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hash_tag_header"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/specific__Recyclerview"
+            android:layout_below="@+id/layout02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

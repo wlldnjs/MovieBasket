@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.moviebasket.android.client"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+
+    //floating acting bar menu
+    compile 'com.github.clans:fab:1.6.2'
+
+    //네트워킹 처리
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //이미지 로딩
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //원 이미지
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    //JSOUP 웹파싱
+    compile 'org.jsoup:jsoup:1.10.1'
+
+    //폰트
+    compile 'com.tsengvn:typekit:1.0.1'
+
+    //intro 페이지
+   // compile 'com.github.paolorotolo:appintro:4.1.0'
+
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_movie_detail"
+    android:layout_width="326dp"
+    android:layout_height="568dp"
+    android:background="@drawable/popup_back"
+    tools:context="com.moviebasket.android.client.movie_detail.MovieDetailDialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/Xbtn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/popup_xbutton" />
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="175dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="106dp">
+
+                <ImageView
+                    android:id="@+id/img_movie"
+                    android:layout_width="120dp"
+                    android:layout_height="175dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_bar_logo" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="106dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="감독 / "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/direct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_below="@id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="누적관객수 /"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/viewCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="157dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="평점"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/starPoint"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@id/text1"
+                    android:layout_marginTop="157dp"
+                    android:layout_width="150dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/popup_star_zero" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/layout3"
+            android:layout_width="324dp"
+            android:layout_height="284dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="31dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="8dp"
+                android:text="줄거리"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/storybord"
+                android:layout_width="268dp"
+                android:layout_height="140dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_marginLeft="31dp"
+                android:layout_below="@id/text"
+                android:layout_centerInParent="true"
+                android:background="#f4f3f2"
+                android:scrollbars="vertical"
+                android:maxLines="7"
+                android:text="준비중입니다." />
+
+            <ImageView
+                android:id="@+id/morebtn"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/popup_add"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

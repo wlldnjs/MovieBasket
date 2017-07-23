@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_specific_basket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.moviebasket.android.client.basket_detail.SpecificBasketActivity">
+
+    <RelativeLayout
+        android:id="@+id/bar_header_rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/Homeicon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/bar_logo" />
+
+        <ImageView
+            android:id="@+id/backBtnIcon"
+            android:layout_width="32dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_backicon" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_header_rlayout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp">
+
+            <!-- 바스켓 이미지 -->
+            <ImageView
+                android:id="@+id/basketImg"
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:scaleType="centerCrop"/>
+
+            <!-- 텍스트 -->
+            <TextView
+                android:id="@+id/basketName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="우울할때 더 우울해지는 영화"
+                android:textColor="#ffff"
+                android:textSize="16sp"/>
+
+            <RelativeLayout
+                android:id="@+id/layout02"
+                android:layout_width="match_parent"
+                android:layout_height="148dp">
+
+                <!-- 다운로드이미지 -->
+                <ImageView
+                    android:id="@+id/specificDownBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/downCount"
+                    android:src="@drawable/sub_basket_down" />
+
+                <!-- 다운로드수 텍스트 -->
+                <TextView
+                    android:id="@+id/downCount"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="1,886"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:textSize="17dp"/>
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/btn_add_movie_specific"
+                    android:layout_width="96dp"
+                    android:layout_height="34dp"
+                    android:layout_below="@+id/textImg"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:background="@drawable/search_addmovie"/>
+
+                <!-- 텍스트이미지 -->
+                <ImageView
+                    android:id="@+id/textImg"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/main_basket_ticket"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6a533d">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/specific__Recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

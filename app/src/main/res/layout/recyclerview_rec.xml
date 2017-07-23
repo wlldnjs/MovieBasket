@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:background="@drawable/sub_ticket"
+    android:layout_marginTop="6dp">
+
+    <LinearLayout
+        android:id="@+id/movieLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_width="96dp"
+        android:layout_height="96dp">
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingTop="7dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="6dp"
+        android:layout_toRightOf="@id/movieLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/basketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로멘틱 남/녀가 되고 싶을때 영화"
+            android:textSize="10sp"/>
+
+
+        <TextView
+            android:id="@+id/owner"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소유자"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+by. "
+            android:layout_toLeftOf="@id/owner"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/basketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영화이름"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/movie_pub_date"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2008"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/slash"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_toRightOf="@id/movie_pub_date"
+            android:text="/"
+            />
+        <TextView
+            android:id="@+id/direct"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/title"
+            android:layout_toRightOf="@id/slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="감독"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/likecount"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:text="1,023"/>
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/likecount"
+            android:layout_width="33dp"
+            android:layout_height="29dp"
+            android:src="@drawable/sub_heart"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/book_mark"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/heart"
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:src="@drawable/sub_movie_down"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

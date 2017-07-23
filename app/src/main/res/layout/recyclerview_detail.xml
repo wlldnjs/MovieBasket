@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/sub_ticket"
+    >
+
+    <LinearLayout
+        android:id="@+id/movieLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingTop="8dp"
+        android:paddingLeft="19dp"
+        android:paddingRight="6dp"
+        android:layout_toRightOf="@id/movieLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/BasketUserName"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소유자"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+by. "
+            android:layout_toLeftOf="@id/BasketUserName"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/movieName"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/basketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영화"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/movieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2008"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/slash"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieName"
+            android:layout_toRightOf="@id/year"
+            android:text="/"
+            />
+        <TextView
+            android:id="@+id/director"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/movieName"
+            android:layout_toRightOf="@id/slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="감독"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/downCount"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:text="1,023"/>
+
+        <ImageView
+            android:id="@+id/heartImg"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/downCount"
+            android:layout_width="33dp"
+            android:layout_height="29dp"/>
+
+        <ImageView
+            android:id="@+id/downImg"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/heartImg"
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

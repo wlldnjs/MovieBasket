@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
+        <ImageView
+            android:id="@+id/Homeicon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bar_logo"/>
+        <!--<ImageView
+            android:id="@+id/btn_tag_main"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/main_bar_hash"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/centerImg"/>-->
+
+        <ImageView
+            android:id="@+id/backBtnIcon"
+            android:layout_width="32dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_backicon" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/login_back">
+
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_width="130dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ededed"></View>
+            <LinearLayout
+                android:id="@+id/suggest_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#00ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="오늘의 추천 태그"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:background="#00444444">
+
+
+                <GridView
+                    android:id="@+id/gridView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/search_view_line"
+                    android:background="#00ffffff"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:verticalSpacing="3dp"></GridView>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_width="130dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ededed"></View>
+            <LinearLayout
+                android:id="@+id/themeB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="내 상황"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:background="#00444444">
+
+
+                <GridView
+                    android:id="@+id/gridView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#00ffffff"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dp"></GridView>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_width="130dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ededed"></View>
+            <LinearLayout
+                android:id="@+id/themeB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="12dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="감정 / 기분"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:background="#00444444">
+
+                <GridView
+                    android:id="@+id/gridView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#00ffffff"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dp"></GridView>
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_width="130dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="4dp"
+                android:background="#ededed"></View>
+            <LinearLayout
+                android:id="@+id/themeB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="12dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:text="기타"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="#00444444"
+                android:orientation="vertical">
+
+
+                <GridView
+                    android:id="@+id/gridView4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#00ffffff"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dp"></GridView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

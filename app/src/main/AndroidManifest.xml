@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moviebasket.android.client">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".global.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".join.JoinActivity" />
+        <activity android:name=".mypage.movie_pack_list.MoviePackActivity" />
+        <activity android:name=".mypage.movie_rec_list.MovieRecActivity" />
+        <activity android:name=".mypage.basket_list.BasketListActivity" />
+        <activity android:name=".basket_detail.SpecificBasketActivity" />
+        <activity android:name=".tag.tagged.TaggedBasketListActivity" />
+        <activity android:name=".tag.hashtag.HashTagActivity" />
+        <activity
+            android:name=".search.MovieSearchActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".testpage.JsoupActivity" />
+        <activity android:name=".mypage.setting.SettingActivity" />
+        <activity android:name=".intro.IntroActivity"/>
+    </application>
+
+</manifest>
